@@ -5,13 +5,14 @@ on:
   push:
     branches:
       - "dev"
-
+env:
+  REPO: main
 jobs:
   setup:
     runs-on: ubuntu-latest
 
     steps:
-    - name: setup the environment
+    - name: setup the environment for ${{ REPO }}
       run: |
         curl -X POST -H "Authorization: token ${{ secrets.PAT }}" \
         https://api.github.com/repos/technophilnomad/Devops/actions/workflows/31592923/dispatches \
