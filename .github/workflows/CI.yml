@@ -1,0 +1,15 @@
+name: CI 
+
+on: 
+  workflow_dispatch: {}
+  push:
+    branches:
+      - "dev"
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: setup the environment
+      run: echo "Initial setup completed"
