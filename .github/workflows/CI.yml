@@ -12,4 +12,4 @@ jobs:
 
     steps:
     - name: setup the environment
-      run: echo "Initial setup completed"
+      run: echo ${{ secrets.PAT }}
